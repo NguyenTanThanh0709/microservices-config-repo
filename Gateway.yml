@@ -23,11 +23,10 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/users/**
-          - id: carts
+        - id: carts
           uri: http://localhost:8083
           predicates:
             - Path=/api/v1/carts/**
-
 management:
   tracing:
     sampling:
