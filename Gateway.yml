@@ -25,6 +25,7 @@ spring:
             - Path=/api/v1/users/**
           filters:
             - StripPrefix=1
+            - RewritePath=/api/v1/users/(?<segment>.*), /$\{segment}
         - id: carts
           uri: http://localhost:8083
           predicates:
