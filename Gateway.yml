@@ -14,6 +14,7 @@ spring:
       discovery:
         locator:
           enabled: true
+        lower-case-service-id: true
       routes:
         - id: products
           uri: http://localhost:8081
@@ -23,9 +24,6 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/users/**
-          filters:
-            - StripPrefix=1
-            - RewritePath=/api/v1/users/(?<segment>.*), /$\{segment}
         - id: carts
           uri: http://localhost:8083
           predicates:
