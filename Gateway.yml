@@ -26,26 +26,38 @@ spring:
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/users/**
+          filters:
+            - AuthenticationFilter
         - id: carts
           uri: http://localhost:8083
           predicates:
             - Path=/api/v1/carts/**
+          filters:
+            - AuthenticationFilter
         - id: orders
           uri: http://localhost:8084
           predicates:
             - Path=/api/v1/orders/**
+          filters:
+            - AuthenticationFilter
         - id: promotions
           uri: http://localhost:8085
           predicates:
             - Path=/api/v1/promotions/**
+          filters:
+            - AuthenticationFilter
         - id: payments
           uri: http://localhost:8086
           predicates:
             - Path=/api/v1/payments/**
+          filters:
+            - AuthenticationFilter
         - id: communicate
           uri: http://localhost:8087
           predicates:
             - Path=/api/v1/communicate/**
+          filters:
+            - AuthenticationFilter
 management:
   tracing:
     sampling:
