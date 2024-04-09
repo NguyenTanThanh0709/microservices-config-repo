@@ -50,8 +50,6 @@ spring:
           uri: http://localhost:8086
           predicates:
             - Path=/api/v1/payments/**
-          filters:
-            - AuthenticationFilter
         - id: communicate
           uri: http://localhost:8087
           predicates:
